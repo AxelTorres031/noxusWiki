@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noxus Wiki - Personajes</title>
+<link rel="stylesheet" href="../CSS/style2.css">
+</head>
+
+<body>
+<header>
+  <h1>Noxus Wiki</h1>
+   <nav>
+    <a href="index.html">Inicio</a> |
+    <a href="personajes.html">Personajes</a> |
+    <a href="jefes.html">Jefes</a> |
+    <a href="estatuas.html">Estatuas</a> 
+  </nav>
+</header>
+
+<main>
+  <h1>Estatuas</h1>
+
+  <div class="galeria">
+    <div class="personaje">
+      <img src="../Imagenes/Estatua del sacerdote sin fondo.png" data-nombre="Estatua del Sacerdote" data-descripcion="La estatua del Sacerdote genera un círculo en el suelo que otorga 30/s de energía a los personajes dentro de él cada 12 segundos. Es útil para personajes que no se mueven mucho durante sus habilidades, ya que su efecto está limitado al área donde se activa">
+      <p>Estatua del Sacerdote</p>
+    </div>
+
+    <div class="personaje">
+      <img src="../Imagenes/Estatua del caballeo sin fondo.png" data-nombre="Estatua del Caballero" data-descripcion="Cada vez que se usa la habilidad, invoca un caballero que te ayuda como las mascotas o ayudantes que te encuentras en el camino, provocan 4 de daño por ataque. El caballero se parece a los caballeros enemigos pero con detalles azules. Duran 20 segundos ayudando o hasta morir. La habilidad tiene 7 segundos de enfriamiento. Es posible incrementar la cantidad de caballeros con la mejora que activa dos veces el efecto de estatua, llegando a tener fácilmente 4 caballeros en juego. La mejora de las mascotas también les afecta.">
+      <p>Estatua del Caballero</p>
+    </div>
+
+    <div class="personaje">
+      <img src="../Imagenes/Estatua del paladin sin fondo.png" data-nombre="Estatua del Paladin" data-descripcion="Da un escudo azul que hace que el próximo daño que se reciba se reduzca a cero, pero no evita debuffs, es decir, el escudo solo cubrira el primer daño del veneno y fuego. El escudo dura hasta 6 segundos si no se recibe daño.">
+      <p>Estatua del Paladin</p>
+    </div>
+
+    <div class="personaje">
+      <img src="../Imagenes/Estatua del elfo sin fondo.png" data-nombre="Estatua del Elfo" data-descripcion="Crea una onda expansiva de color azul que aleja a los enemigos en su área provocando también 5 de daño. Las balas que estén en el área se eliminan al contacto, si se cuenta con la mejora de reflejar balas con armas cuerpo a cuerpo también lo hará. No afecta a enemigos estáticos. Recomendada para evitar el combate a cuerpo a cuerpo, evitar que se aglomeren enemigos alrededor o destruir muchos proyectiles de jefes en momentos oportunos.">
+      <p>Estatua del Elfo</p>
+    </div>
+
+    <div class="personaje">
+      <img src="../Imagenes/Estatua del ingeniero sin fondo.png" data-nombre="Estatua del Ingeniero" data-descripcion="Invoca 4 TNT's alrededor del jugador (en foma cuadricular) al usar la habilidad del personaje que explotan al ser tocada por enemigos, una bala o por ti mismo (no te hará daño), de todas formas explotaran después de unos segundos. Es recomendable si usas ataques cuerpo a cuerpo y tener una estrategia antes de entrar en la sala para que su inmenso daño valga la pena. Cada TNT hace 8 de daño (siendo un total de 32 de daño si logras conectarlas todas)..">
+      <p>Estatua del Ingeniero</p>
+    </div>
+
+    <div class="personaje">
+      <img src="../Imagenes/Estatua del mago sin fondo.png" data-nombre="Estatua de Mago" data-descripcion="Invoca 8 proyectiles de color morado autodirigidos que iran y atacaran al enemigo mas cercano (ignorando las coberturas). Cada proyectil provoca 3 de daño (24 de daño en total). Su enfriamiento es de 5 segundos.">
+      <p>Estatua de Mago</p>
+    </div>
+
+    <div class="personaje">
+      <img src="../Imagenes/Estatua del asesino sin fondo.png" data-nombre="Estatua de Asesino" data-descripcion="Dispara 3 cuchillos al frente que atraviesan todo menos paredes. Provocan 4 de daño cada uno. También pueden dañar cajas. Es muy difícil que den golpes críticos. Su enfriamiento es de 1 segundo. Se puede incrementar a 5 cuchillos con la mejora de escopetas. Altamente recomendado para personajes cuya habilidad tiene bajo enfriamiento, como el pícaro. El buff de las balas rebotan afecta a los cuchillos.">
+      <p>Estatua de Asesino</p>
+    </div>
+  </div>
+</main>
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <span class="close">X</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
+  </div>
+</div>
+
+<script>
+let modal = document.getElementById("infoModal");
+let titulo = document.getElementById("modalTitle");
+let descripcion = document.getElementById("modalDescription");
+let cerrar = document.querySelector(".close");
+
+document.querySelectorAll(".personaje img").forEach(function(img) {
+  img.onclick = function() {
+    titulo.textContent = img.dataset.nombre;
+    descripcion.textContent = img.dataset.descripcion;
+    modal.style.display = "block";
+  }
+});
+
+cerrar.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(e) {
+  if (e.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<footer>
+  <p>&copy; 2025 Zona Noxus Wiki. Todos los derechos reservados por nosotros.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+header {
+  background-color: rgba(26, 26, 26, 0.95);
+  padding: 20px 0;
+  border-bottom: 2px solid #e63946;
+}
+
+header h1 {
+  color: #e63946;
+  margin: 0;
+}
+
+nav a {
+  color: #e0e0e0;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #e63946;
+}
+
+/*Galeria*/
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  width: 90%;
+  margin: 40px auto;
+}
+
+/*Bloque de los biomas*/
+.bioma {
+  background-color: rgba(20, 20, 20, 0.85);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(230, 57, 70, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bioma:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px rgba(230, 57, 70, 0.5);
+}
+
+.bioma h2 {
+  color: #e63946;
+  margin-bottom: 15px;
+}
+
+/*decoracion de los jeffes */
+.jefes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.jefe {
+  width: 150px;
+  background-color: rgba(10, 10, 10, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+
+.jefe:hover {
+  transform: scale(1.05);
+}
+
+.jefe img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.jefe p {
+  font-size: 0.85em;
+  margin-top: 8px;
+  color: #e63946;
+}
+
+/*la ptada de la pagina*/
+footer {
+  background-color: rgba(26, 26, 26, 0.95);
+  text-align: center;
+  padding: 15px 0;
+  border-top: 2px solid #e63946;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+/* ====== CONSULTAS ====== */
+.consulta-container {
+  max-width: 600px;
+  margin: 60px auto;
+  background-color: rgba(20, 20, 20, 0.85);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(230, 57, 70, 0.4);
+}
+
+.form-consulta {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.form-consulta label {
+  font-weight: bold;
+  color: #e63946;
+}
+
+.form-consulta input,
+.form-consulta textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1b1b1b;
+  color: #e0e0e0;
+}
+
+.form-consulta button {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #e63946;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-consulta button:hover {
+  background-color: #ff4757;
+}

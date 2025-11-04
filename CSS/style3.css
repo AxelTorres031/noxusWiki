@@ -1,0 +1,115 @@
+/* ====== GENERAL ====== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+/* ====== CABECERA ====== */
+header {
+  background-color: rgba(26, 26, 26, 0.95);
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 2px solid #e63946;
+}
+
+header h1 {
+  margin: 0;
+  color: #e63946;
+  font-size: 2em;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #e0e0e0;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #e63946;
+}
+
+/* ====== GALERÍA DE PERSONAJES ====== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 👈 Máximo 5 por fila */
+  gap: 25px;
+  width: 85%;
+  margin: 40px auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(230, 57, 70, 0.3);
+}
+
+/* Cada personaje se ubica en una celda de la cuadrícula */
+.personaje {
+  text-align: center;
+}
+
+.personaje img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+
+.personaje img:hover {
+  transform: scale(1.1);
+}
+
+.personaje p {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #e63946;
+}
+
+/* ====== MODAL ====== */
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #1b1b1b;
+  color: #e0e0e0;
+  margin: 120px auto;
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(230,57,70,0.4);
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-weight: bold;
+  color: #e63946;
+  font-size: 18px;
+}
+
+/* ====== PIE DE PÁGINA ====== */
+footer {
+  background-color: rgba(26, 26, 26, 0.95);
+  text-align: center;
+  padding: 15px 0;
+  border-top: 2px solid #e63946;
+  font-size: 0.9em;
+  margin-top: 40px;
+}

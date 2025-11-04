@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noxus Wiki - Personajes</title>
+<link rel="stylesheet" href="../CSS/style3.css">
+</head>
+
+<body>
+<header>
+  <h1>Noxus Wiki</h1>
+   <nav>
+    <a href="index.html">Inicio</a> |
+    <a href="personajes.html">Personajes</a> |
+    <a href="jefes.html">Jefes</a> |
+    <a href="estatuas.html">Estatuas</a> 
+  </nav>
+</header>
+
+<main>
+  <h1>Personajes de Soul Knight</h1>
+
+  <div class="galeria">
+    <div class="personaje">
+      <img src="../Imagenes/Caballero sin fondo.png" data-nombre="Caballero" data-descripcion="Un guerrero confiable y equilibrado. Posee un total de 7 de vida, 6 de defensa y 200 de energia.">
+      <p>Caballero</p>
+    </div>
+
+    <div class="personaje">
+      <img src="../Imagenes/Asesino sin fondo.png" data-nombre="Asesino" data-descripcion="Silencioso, letal y preciso. Posee un total de 5 de visa, 5 de defensa y 200 de energia.">
+      <p>Asesino</p>
+    </div>
+
+    <div class="personaje">
+      <img src="../Imagenes/Picaro sin fondo.png" data-nombre="Picaro" data-descripcion="Un luchador agil que valora la velocidad por encima de todo.Posee un total de 6 de vida, 4  de defensa y 200 de energia.">
+      <p>Picaro</p>
+    </div> 
+
+    <div class="personaje">
+      <img src="../Imagenes/Sacerdotisa sin fondo.png" data-nombre="Sacerdote" data-descripcion="Esparce luz en las mazmorras mas oscuras. Posee un total de 4 de visa, 6 de defensa y 220 de energia">
+      <p>Sacerdote</p>
+    </div>
+
+    <div class="personaje">
+      <img src="../Imagenes/Alquimista sin fondo.png" data-nombre="Alquimista" data-descripcion="Usa pociones explosivas y habilidades químicas. Posee un total de 6 de vida, 6 de defensa y 200 de energia">
+      <p>Alquimista</p>
+    </div>
+
+    <div class="personaje">
+      <img src="../Imagenes/Ingeniero sin fondo.png" data-nombre="Ingeniero" data-descripcion="Un genio inventor que confia en sus maquinas. Posee un total de 6 de vida, 5 de defensa y 200 de energia.">
+      <p>Ingeniero</p>
+    </div>
+
+    <div class="personaje">
+      <img src="../Imagenes/Paladin sin fondo.png" data-nombre="Paladin" data-descripcion="Un caballero sagrado con un fuerte sentido de la justicia. Posee un total de 2 de vida, 9 de defensa y 140 de energia.">
+      <p>Paladin</p>
+    </div>
+
+    <div class="personaje">
+      <img src="../Imagenes/Vampiro sin fondo.png" data-nombre="Vampiro" data-descripcion="Roba vida a sus enemigos con ataques oscuros. Posee  un total de 4 de vida, 5 de defensa y 140 de energia.">
+      <p>Vampiro</p>
+    </div>
+
+    <div class="personaje">
+      <img src="../Imagenes/Elfo si fondo.png" data-nombre="Elfo" data-descripcion="Un arquero agil del bosque. Posee un total de 6 de vidda, 5 de defensa y 200 de energia.">
+      <p>Elfo</p> 
+    </div>
+
+    <div class="personaje">
+      <img src="https://art.pixilart.com/thumb/fac4f2041ebb149.png" data-nombre="Hombre Lobo" data-descripcion="Transforma su furia en fuerza salvaje. Posee un total de 12 de vida, 2 de defensa y 140 de energia.">
+      <p>Hombre Lobo</p>
+    </div>
+  
+  <div class="personaje">
+      <img src="../Imagenes/Bruja sin fondo.png" data-nombre="Bruja" data-descripcion="Una maestra de las fuerzas arcanas. Posee un total de 4 de vida, 5 de defensa y 240 de energia.">
+      <p>Bruja</p>
+    </div>
+
+    <div class="personaje">
+      <img src="../Imagenes/Berserker sin fondo.png" data-nombre="Berserker" data-descripcion="Cuanto mas sangra, mas fuerte se vuelve. Posee un total de 10 de vida, 4 de defensa y 170 de energia.">
+      <p>Berserker</p>
+    </div>
+
+    <div class="personaje">
+      <img src="../Imagenes/Druida sin fondo.png" data-nombre="Druida" data-descripcion="Transforma su furia en fuerza salvaje. Posee un total de 12 de visa, 2 de defensa y 140 de energia.">
+      <p>Druida</p>
+    </div>
+  
+    <div class="personaje">
+      <img src="../Imagenes/Robot sin fondo.png" data-nombre="Robot" data-descripcion="Antes roto ahora renacido. Posee un total de 4 de vida, 7 de escudo y 200 de energia.">
+      <p>Robot</p>
+    </div>
+  
+    <div class="personaje">
+      <img src="../Imagenes/Necromante sin fondo.png" data-nombre="Necromante" data-descripcion="Comanda al ejercito de los muertos. Posee un total de 4 de vida, 6 de defensa y 260 de energia.">
+      <p>Necromante</p>
+    </div>
+  </div>
+</main>
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <span class="close">X</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
+  </div>
+</div>
+
+<script>
+let modal = document.getElementById("infoModal");
+let titulo = document.getElementById("modalTitle");
+let descripcion = document.getElementById("modalDescription");
+let cerrar = document.querySelector(".close");
+
+document.querySelectorAll(".personaje img").forEach(function(img) {
+  img.onclick = function() {
+    titulo.textContent = img.dataset.nombre;
+    descripcion.textContent = img.dataset.descripcion;
+    modal.style.display = "block";
+  }
+});
+
+cerrar.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(e) {
+  if (e.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<footer>
+  <p>&copy; 2025 Zona Noxus Wiki. Todos los derechos reservados por nosotros.</p>
+</footer>
+</body>
+</html>
